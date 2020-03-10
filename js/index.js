@@ -51,6 +51,18 @@ document.querySelector('a:nth-of-type(4)').textContent = siteContent["nav"]["nav
 document.querySelector('a:nth-of-type(5)').textContent = siteContent["nav"]["nav-item-5"]; 
 document.querySelector('a:nth-of-type(6)').textContent = siteContent["nav"]["nav-item-6"]; 
 
+// appending and prepending two a tags in navigation
+const newElement = document.createElement('a'); 
+newElement.textContent = 'FAQ'; 
+
+const parentElement = document.querySelector('nav'); 
+parentElement.append(newElement); 
+
+const newEl = document.createElement('a'); 
+newEl.textContent = 'Resources'; 
+
+const parentEl = document.querySelector('nav'); 
+parentEl.prepend(newEl); 
 // cta img below
 
 //variable
@@ -72,10 +84,12 @@ document.querySelector('.bottom-content :nth-child(1) h4').textContent = siteCon
 document.querySelector('.bottom-content :nth-child(2) h4').textContent = siteContent["main-content"]["product-h4"];
 document.querySelector('.bottom-content :nth-child(3) h4').textContent = siteContent["main-content"]["vision-h4"]; 
 
+// make all h4s  color pink
 const hders = document.querySelectorAll('h4'); 
 hders.forEach(item => {
   item.style.color = 'pink'; 
 })
+
 // main content p text below
 
 document.querySelector('.top-content:first-child p').textContent = siteContent["main-content"]["features-content"];
